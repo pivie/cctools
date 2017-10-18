@@ -213,6 +213,12 @@ class Connect:
 		else:
 			filescope = ['min']
 
+		if 'exclude' in kwargs and kwargs['exclude']:
+			if isinstance( kwargs['exclude'], str ):
+				excludes = [kwargs['exclude']]
+			else:
+				excludes = kwargs['exclude']
+
 		if lineage==0 and progeny==0 and (isinstance( prid, str ) or len(prid)==1):
 			single_file = True
 		else:
@@ -232,6 +238,8 @@ class Connect:
 					if prid not in visited:
 						visited[prid] = True
 						item = glob.db.find_one( prid )
+						if item.cbid in excludes or item.dbid in excludes:
+							continue
 						if not item:
 							if single_file:
 								print "File not yet available. Don't forget to start a prune_worker"
