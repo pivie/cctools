@@ -158,6 +158,27 @@ prune.export( D5, 'merge_sort.prune', lineage=2 )
   (The hep.wq.py script, in the hep example folder, runs the HEP workflow using Work Queue after submitting workers to the Work Queue master with name 'prune_hep_example' instead of 'prune_census_example'.)
 
 
+<h2 id="census_example">Prune Example Workflow: Monte Carlo Production<a class="sectionlink" href="#mcprod_example" title="Link to this section.">&#x21d7;</a></h2>
+
+  <p>This Monte Carlo Production workflow is a simulation of particle collisions for High Energy Physics research.</p>
+
+  <code style="margin-right: auto;">wget http://ccl.cse.nd.edu/software/prune/mcprod.tar.gz
+tar -xvf mcprod.tar.gz
+cd mcprod
+./wf.py </code>
+
+<h2 id="census_example">Prune Example Workflow: BWA<a class="sectionlink" href="#mcprod_example" title="Link to this section.">&#x21d7;</a></h2>
+
+  <p>BWA is a light-weight alignment tool for performing queries on genomes.
+It supports paired-end mapping, gapped alignment, various file formats, and employs the Burrows Wheeler Transform algorithm to align the genome queries.
+This workflow produces SAM (Sequence Alignment Map) files for use in other workflows.
+</p>
+
+  <code style="margin-right: auto;">wget http://ccl.cse.nd.edu/software/prune/bwa.tar.gz
+tar -xvf bwa.tar.gz
+cd bwa
+./wf.py </code>
+
 
 <h2 id="moreinfo">For More Information<a class="sectionlink" href="#moreinfo" title="Link to this section.">&#x21d7;</a></h2>
 
